@@ -58,7 +58,7 @@ python saavn-cli.py search english songs
 - MacOS (Homebrew) : `brew install ffmpeg` <br> check [brew.sh](https://brew.sh) <br>
 - Windows users can copy `ffmpeg.exe` to `C:\Windows\System32` or any other `$PATH` Directory
 
-2) Download Executable from [RELEASES PAGE](https://github.com/wiz64/saavn-cli/releases/)
+2) Download Executable from [RELEASES PAGE](https://github.com/wiz64/saavn-cli/releases/) (new)
 Directly run commands relatively to the executables.
 
 ---
