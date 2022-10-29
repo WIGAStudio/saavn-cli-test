@@ -5,7 +5,7 @@ Search, Download and Play your favorite songs right away from the command-line. 
 
 ## [Download](https://github.com/wiz64/saavn-cli/releases)
 <br>
-
+<!--eX-->
 > Developer : [@wiz64](https://github.com/wiz64) <br>
 > Status : `In Development`<br>
 > Version : `v 1.0.1`<br>
