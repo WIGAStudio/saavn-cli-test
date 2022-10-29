@@ -40,7 +40,7 @@ jobs:
             TARGET: macos
             CMD_BUILD: >
                 pip install pyinstaller
-                pyinstaller -F -w -n saavn-cli saavn-cli.py &&
+                python -m PyInstaller -F -w -n saavn-cli saavn-cli.py &&
                 cd dist/ &&
                 zip -r9 saavn-cli saavn-cli.app/
             OUT_FILE_NAME: saavn-cli.zip
