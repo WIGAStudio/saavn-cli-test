@@ -39,7 +39,7 @@ jobs:
           - os: macos-latest
             TARGET: macos
             CMD_BUILD: >
-                pip install pyinstaller
+                pip install pyinstaller &&
                 python -m PyInstaller -F -w -n saavn-cli saavn-cli.py &&
                 cd dist/ &&
                 zip -r9 saavn-cli saavn-cli.app/
