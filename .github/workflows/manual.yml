@@ -15,8 +15,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v12
-        release_name: Release v12
+        tag_name: v121
+        release_name: Release v121
         draft: false
         prerelease: false
     - name: Output Release URL File
@@ -38,7 +38,7 @@ jobs:
             TARGET: macos
             CMD_BUILD: >
                 pip install pyinstaller && pip install -r requirements.txt &&
-                python -m PyInstaller --one-file saavn-cli.py &&
+                python -m PyInstaller --onefile saavn-cli.py &&
                 cd dist/ &&
                 zip -r9 saavn-cli saavn-cli.app/
             OUT_FILE_NAME: saavn-cli.zip
