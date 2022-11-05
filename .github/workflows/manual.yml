@@ -37,12 +37,25 @@ jobs:
           - os: macos-latest
             TARGET: macos
             CMD_BUILD: >
-                pip install pyinstaller &&
-                python -m PyInstaller -F -w -n saavn-cli saavn-cli.py &&
+                pip install pyinstaller && pip install -r requirements.txt &&
+                python -m PyInstaller --one-file saavn-cli.py &&
                 cd dist/ &&
                 zip -r9 saavn-cli saavn-cli.app/
             OUT_FILE_NAME: saavn-cli.zip
             ASSET_MIME: application/zip
+          - os: ubuntu-latest
+            TARGET: ubuntu
+            CMD_BUILD: >
+                sudo apt update -y
+                sudo apt install software-properties-common -y
+                sudo add-apt-repository ppa:deadsnakes/ppa -y
+                sudo apt install python3.9 -y
+                sudo apt install pip -y
+                python3.9 -m pip install -r requirements.txt
+                pthon3.9 -m pip install pyinstaller
+                python3.9 -m PyInstaller --onefile saavn-cli.py -n saavn-cli
+            OUT_FILE_NAME: saavn-cli
+            ASSET_MIME: application/x-elf
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: pip install pyinstaller && pyinstaller -F -w -n saavn-cli saavn-cli.py
